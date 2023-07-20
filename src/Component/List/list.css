@@ -1,0 +1,34 @@
+.List{
+    width: 50%;
+    height: 100%;
+    font-family: var(--fam);
+    color: var(--col);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form{
+    margin: 20px 0px;
+}
+
+form label{
+    margin-right: 10px;
+    font-size: 14px;
+}
+form select{
+    padding: 5px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.display{
+    width: 370px;
+    height: 85%;
+  
+    padding: 10px;
+    overflow: auto;
+}
+.display::-webkit-scrollbar{
+    display: none;
+}

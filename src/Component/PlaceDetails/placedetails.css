@@ -1,0 +1,95 @@
+.Card{
+    width: 350px;
+    border: 1px solid  #677C94;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    
+}
+.Card:hover{
+    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.28);
+-webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.28);
+-moz-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.28);
+}
+
+.imageSec img{
+    width: 350px;
+    height: 230px;
+    background-size: cover;
+    background-position: center;
+    border-bottom: #677C94 1px solid;
+}
+
+.detailsSec{
+    padding: 10px;
+    font-size: 14px;
+    color: #677C94;
+}
+
+.placeName{
+    color: var(--col);
+    font-size: 16px;
+}
+
+.common{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.iconDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+}
+
+.cuisineBox{
+    margin:10px 0px;
+    display: flex;
+    width:100%;
+    height: auto;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    gap: 5px;
+}
+
+.cuisineBox::-webkit-scrollbar{
+    display: none;
+}
+
+.cuisineBox p{
+    background-color: #7689A0;
+    width: auto;
+    color: white;
+    padding: 2px 6px;
+    text-align: center;
+    white-space: nowrap;
+    border-radius: 10px;
+}
+
+.common2{
+    display: flex;
+    align-items: center;
+    color: var(--col);
+    gap:10px;
+    margin: 10px 0px;
+}
+
+.placeWebsite{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+button{
+    padding: 5px;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color:var(--col);
+}
+button:hover{
+    background-color: #7689A0;
+}
