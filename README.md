@@ -3,7 +3,7 @@
     Welcome to Travelia, a web-based application designed to aid all your travel planning and exploration needs.
 
 ## Live Demo
-  [Click Here - Travelia ->](travelia-explore-travel.netlify.app)
+  [Click Here - Travelia ->](https://travelia-explore-travel.netlify.app/)
 
 ## Key Features
   - Location Search: Just type the name of a location and gain instant access to its numerous attractions.
