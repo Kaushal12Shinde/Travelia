@@ -4,28 +4,32 @@ import Navbar from "./Component/Navbar/Navbar";
 import List from "./Component/List/List";
 import Map from "./Component/Map/Map";
 import { getPlacesData } from "./Api";
-import PlacesData from "./PlacesData";
-// import { Autocomplete } from "@react-google-maps/api";
 
 function App() {
   
   const [places, setPlaces] = useState([]);
+  const [filteredPlaces, setFilteredPlaces] = useState([]);
 
   const [isLoading, setIsLoading] = useState(false);
 
-  const [type, setType] = useState("restaurants");
-
   const [rating, setRating] = useState("");
-
-  const [filteredPlaces, setFilteredPlaces] = useState([]);
-
-  const [coordinates, setCoordinates] = useState({
-    lat: 19.0473,
-    lng: 73.0699,
-  });
-
+  const [type, setType] = useState("restaurants");
+  
+  const [coordinates, setCoordinates] = useState({});
   const [boundries, setBoundries] = useState(null);
 
+  const [autocomplete, setAutocomplete] = useState(null);
+  const onLoad = (autoC) => setAutocomplete(autoC);
+
+  const onPlaceChanged = () => {
+    if (autocomplete && autocomplete.getPlace() && autocomplete.getPlace().geometry && autocomplete.getPlace().geometry.location) {
+      const latitude = autocomplete.getPlace().geometry.location.lat();
+      const longitude = autocomplete.getPlace().geometry.location.lng();
+      setCoordinates({ lat:latitude, lng:longitude });
+    }
+  };
+
+  
   //-----current coordinate
     
     useEffect(()=>{
@@ -46,35 +50,26 @@ function App() {
   
   useEffect(()=>{
     console.log('get final cord',coordinates,boundries);
-       setIsLoading(true);
+    setIsLoading(true);
     //async function so then
     if(boundries!=null){
       getPlacesData(type,boundries.sw,boundries.ne)
         .then((data)=>{
-            console.log(data);
+            // console.log(data);
             setFilteredPlaces([]);
-            setPlaces(data);
+            setRating('');
+            setPlaces(data.filter((place) => place.name && place.num_reviews > 0));
             setIsLoading(false);
         });
     }
-  },[type,coordinates,boundries]);
+  },[type,boundries]);
 
-  //-----testing purpose..
-    
-    // useEffect(() => {
-    //   setPlaces(PlacesData);
-    //   setFilteredPlaces([]);
-    // }, []);
-
-    // useEffect(() => {
-    //   console.log(places);
-    // }, [places]);
 
   return (
     <div className="App">
-      {/* <Autocomplete> */}
-        <Navbar />
-      {/* </Autocomplete> */}
+      
+        <Navbar onPlaceChanged={onPlaceChanged} onLoad={onLoad}/>
+     
              
       <section className="main">
         <List

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './list.css'
-import PlaceDetails from '../PlaceDetails/PlaceDetails'
+import PlaceDetails from '../Details/PlaceDetails'
 
 const List = ({ places , isLoading , type , setType , rating , setRating }) => {
    

@@ -4,12 +4,14 @@
     border-radius: 10px;
     overflow: hidden;
     margin-bottom: 20px;
+    box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),
+    -6px -6px 10px -1px rgba(255,255,255,0.7);
+    border: 1px solid rgba(0,0,0,0.3);
+    transition: 0.3s ease-in;
     
 }
 .Card:hover{
-    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.28);
--webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.28);
--moz-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.28);
+    letter-spacing: 0.2px;
 }
 
 .imageSec img{
@@ -28,7 +30,7 @@
 
 .placeName{
     color: var(--col);
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .common{
@@ -52,6 +54,7 @@
     flex-wrap: nowrap;
     overflow-x: scroll;
     gap: 5px;
+    font-size: 12px;
 }
 
 .cuisineBox::-webkit-scrollbar{

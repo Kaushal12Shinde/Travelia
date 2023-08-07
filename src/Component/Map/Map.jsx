@@ -17,7 +17,7 @@ const Map = ({ setCoordinates, setBoundries, coordinates, places }) => {
 
   return (
     <div className="Map">
-      <div className="mapContainer" style={{ position: "absolute", width: "100%", height: "100%" }}>
+      <div className="mapContainer" style={{ position: "absolute", width: "100%", height: "100%" , top:0}}>
         <GoogleMapReact
           bootstrapURLKeys={{ key: `${ApiKey}`,map_ids: "179da32bc51d1681" }}
           defaultCenter={coordinates}
@@ -25,14 +25,14 @@ const Map = ({ setCoordinates, setBoundries, coordinates, places }) => {
           defaultZoom={14}
           margin={[50, 50, 50, 50]}
           options={{ disableDefaultUI: true, zoomControl: true }}
-          onChange={(e) => {
-            console.log("getting from mape object", e);
-            setCoordinates({ lat: e.center.lat, lng: e.center.lng });
-            setBoundries({ ne: e.marginBounds.ne, sw: e.marginBounds.sw });
-          }}
+          // onChange={(e) => {
+          //   console.log("getting from mape object", e);
+          //   setCoordinates({ lat: e.center.lat, lng: e.center.lng });
+          //   setBoundries({ ne: e.marginBounds.ne, sw: e.marginBounds.sw });
+          // }}
           onChildClick={""}
           >
-            {places && places.filter((place) => place.latitude && place.longitude)
+            {/* {places && places.filter((place) => place.latitude && place.longitude)
             .map((place, index) => {
               return (
                 <Marker
@@ -42,7 +42,7 @@ const Map = ({ setCoordinates, setBoundries, coordinates, places }) => {
                   place={place}
                 />
               );
-            })}
+            })} */}
         </GoogleMapReact>
       </div>
     </div>

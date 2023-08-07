@@ -1,9 +1,10 @@
 import React from 'react';
 import './Navbar.css';
+import { Autocomplete } from '@react-google-maps/api';
 import HikingIcon from '@mui/icons-material/Hiking';
 import SearchIcon from '@mui/icons-material/Search';
 
-const Navbar = () => {
+const Navbar = ({ onPlaceChanged, onLoad }) => {
 
   return ( 
     
@@ -16,9 +17,9 @@ const Navbar = () => {
             <h2>Travelia</h2>
           </div>
           <div className="searchBox flex">
-            {/* <Autocomplete> */}
-              <input type="text" placeholder='Explore..' value='' />
-            {/* </Autocomplete> */}
+            <Autocomplete onLoad={onLoad} onPlaceChanged={onPlaceChanged}>
+              <input type="text" placeholder='Explore Places..'/>
+            </Autocomplete>
               <div className="searchicon">
                 <SearchIcon style={{color:'white'}}/>
               </div>
