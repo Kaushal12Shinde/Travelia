@@ -1,70 +1,20 @@
-# Getting Started with Create React App
+Travelia: Your Personal Travel Planner
+  
+    Welcome to Travelia, a web-based application designed to aid all your travel planning and exploration needs.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Live Demo :- travelia-explore-travel.netlify.app
 
-## Available Scripts
+Key Features
+  - Location Search: Just type the name of a location and gain instant access to its numerous attractions.
+  - Restaurant Discovery: Craving for some local cuisine? Travelia lets you search for local restaurants in the area you're interested in.
+  - Hotel Finder: From budget stays to luxury suites, find a place that suits your preference and comfort.
+  - Attraction Points: Uncover hidden gems and popular tourist spots, making your travel experience richer and more memorable.
+  - Rating Sort: Make informed decisions with our rating sort feature. Discover the top-rated restaurants, hotels, and attractions in your desired location.
 
-In the project directory, you can run:
+APIs Used 
+Travelia is built using the following APIs:
+  - Travel Advisor API: Provides detailed information about restaurants, hotels, and attraction points of a specific location.
+  - Google Maps API: Offers location searching and dragging functionalities. Also, it's used for retrieving coordinates for more precise results.
+  - Autocomplete API: Enhances the user experience by autocompleting location names during search.
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![App Screenshot](https://github.com/Kaushal12Shinde/Travelia/blob/main/travelia_SS_.png)
