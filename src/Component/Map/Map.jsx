@@ -25,11 +25,11 @@ const Map = ({ setCoordinates, setBoundries, coordinates, places }) => {
           defaultZoom={14}
           margin={[50, 50, 50, 50]}
           options={{ disableDefaultUI: true, zoomControl: true }}
-          // onChange={(e) => {
-          //   console.log("getting from mape object", e);
-          //   setCoordinates({ lat: e.center.lat, lng: e.center.lng });
-          //   setBoundries({ ne: e.marginBounds.ne, sw: e.marginBounds.sw });
-          // }}
+          onChange={(e) => {
+            console.log("getting from mape object", e);
+            setCoordinates({ lat: e.center.lat, lng: e.center.lng });
+            setBoundries({ ne: e.marginBounds.ne, sw: e.marginBounds.sw });
+          }}
           onChildClick={""}
           >
             {/* {places && places.filter((place) => place.latitude && place.longitude)
