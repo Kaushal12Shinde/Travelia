@@ -19,3 +19,6 @@ Travelia is built using the following APIs:
   - Autocomplete API: Enhances the user experience by autocompleting location names during search.
 
 ![App Screenshot](https://github.com/Kaushal12Shinde/Travelia/blob/main/travelia_SS_.png)
+
+- Marker are not Working
+
