@@ -5,7 +5,7 @@
   limited number of requests to ensure the app's functionality.
 
 ## Live Demo
-  [Click Here - Travelia ->](https://travelia-explore-travel.netlify.app/)
+  [Click Here --> Travelia](https://travelia-explore-travel.netlify.app/)
 
 ## Key Features
   - Location Search: Just type the name of a location and gain instant access to its numerous attractions.
