@@ -1,5 +1,6 @@
 ## Travelia
   Welcome to Travelia, a web-based application designed to aid all your travel planning and exploration needs.
+  
   Please note that Travelia uses third-party APIs for fetching data. These APIs have limited request quotas for free usage. Kindly request users to make a       
   limited number of requests to ensure the app's functionality.
 
