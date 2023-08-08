@@ -4,6 +4,8 @@ import Navbar from "./Component/Navbar/Navbar";
 import List from "./Component/List/List";
 import Map from "./Component/Map/Map";
 import { getPlacesData } from "./Api";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   
@@ -28,8 +30,23 @@ function App() {
       setCoordinates({ lat:latitude, lng:longitude });
     }
   };
+  const [counter, setCounter] = useState(localStorage.getItem('counter') || 0);
 
+  useEffect(() => {
+    localStorage.setItem('counter', counter);
+  }, [counter]);
   
+  const notify = (message) => toast(`${message}`, {
+    position: "top-center",
+    autoClose: 1500,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "dark",
+  });
+
   //-----current coordinate
     
     useEffect(()=>{
@@ -51,24 +68,30 @@ function App() {
   useEffect(()=>{
     console.log('get final cord',coordinates,boundries);
     setIsLoading(true);
-    //async function so then
     if(boundries!=null){
-      getPlacesData(type,boundries.sw,boundries.ne)
-        .then((data)=>{
-            // console.log(data);
-            setFilteredPlaces([]);
-            setRating('');
-            setPlaces(data.filter((place) => place.name && place.num_reviews > 0));
-            setIsLoading(false);
-        });
+      if (counter < 8) {
+        setCounter((prevCount) => prevCount + 1);
+        localStorage.setItem('counter',counter);
+        getPlacesData(type,boundries.sw,boundries.ne)
+          .then((data)=>{
+              // console.log(data);
+              setFilteredPlaces([]);
+              setRating('');
+              setPlaces(data.filter((place) => place.name && place.num_reviews > 0));
+              setIsLoading(false);
+          });
+      }
+      else{
+        notify("You have reached the limit of requests");
+      }
     }
   },[type,boundries]);
 
 
   return (
     <div className="App">
-      
-        <Navbar onPlaceChanged={onPlaceChanged} onLoad={onLoad}/>
+        <ToastContainer/>
+        <Navbar onPlaceChanged={onPlaceChanged} onLoad={onLoad} setCounter={setCounter}/>
      
              
       <section className="main">

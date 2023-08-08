@@ -31,6 +31,13 @@
     background-color: #5E82F4;
 }
 
+.Section button{
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    background-color: white;
+}
+
 .searchBox{
     border: 1px solid lightgray;
     border-radius: 8px;
